@@ -1,24 +1,25 @@
 import { createContext, useState, FC } from "react";
 
 type User = {
-  name: string;
+  login: string;
   nickname: string;
+  bio?: string;
   avatar: string;
   followers: number;
   following: number;
+  location?: string;
+  company?: string;
+  email?: string;
+  twitter?: string;
+  blog?: string;
 };
 
 type SearchState = {
-  user: User | undefined
+  user: User | undefined;
   searchUser: (query: string) => void;
 };
 
-const SearchStateDefaultValue: SearchState = {
-  user: undefined,
-  searchUser: () => {},
-};
-
-export const SearchContext = createContext<SearchState>(SearchStateDefaultValue);
+export const SearchContext = createContext<SearchState>({} as SearchState);
 
 const UserProvider: FC = ({ children }) => {
   const [user, setUser] = useState<User>()
@@ -28,14 +29,18 @@ const UserProvider: FC = ({ children }) => {
     const result = await res.json();
 
     setUser({
-      name: result.login,
+      login: result.login,
       nickname: result.name,
+      bio: result.bio,
       avatar: result.avatar_url,
       followers: result.followers,
-      following: result.following
+      following: result.following,
+      location: result.location,
+      company: result.company,
+      email: result.email,
+      twitter: result.twitter_username,
+      blog: result.blog
     })
-
-    console.log(user);
   };
 
   return (
