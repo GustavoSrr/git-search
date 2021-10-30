@@ -11,13 +11,17 @@ export const GlobalStyle = createGlobalStyle`
     --gray: #c9d1d9;
   }
 
-  body {
-    min-height: 100vh;
-
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
 
+  body {
+    min-height: 100vh;
+    width: 100%;
+
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     background-color: var(--bgColor);
   }
 `
