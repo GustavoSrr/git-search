@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const Container = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,37 +22,46 @@ export const Container = styled.header`
   }
 `
 
-export const Left = styled.div`
+export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
-  input {
-    height: 28px;
+  form {
     width: 100%;
 
-    margin-left: 15px;
-    padding: 0 10px;
+    input {
+      height: 28px;
+      width: 20%;
 
-    border-radius: 5px;
-    border: 1px solid var(--borderColor);
-    background-color: var(--bgColor);
-    color: var(--white);
+      margin-left: 15px;
+      padding: 0 10px;
 
-    &::placeholder {
-      color: var(--gray);
-    }
+      border-radius: 5px;
+      border: 1px solid var(--borderColor);
+      background-color: var(--bgColor);
+      color: var(--white);
+      transition: width 0.3s ease-in-out;
 
-    &:focus {
-      outline: 0;
-      border: 1px solid var(--blue);
-      background-color: transparent;
+      &::placeholder {
+        color: var(--gray);
+      }
+
+      &:focus {
+        outline: 0;
+        border: 1px solid var(--blue);
+        background-color: transparent;
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 800px) {
+        width: 60%;
+      }
+
+      @media only screen and (max-width: 500px) {
+        width: 100%;
+      }
     }
   }
-`
-
-export const Right = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `
