@@ -31,11 +31,12 @@ export const Content = styled.div`
   form {
     width: 100%;
 
+    margin-left: 15px;
+
     input {
       height: 28px;
       width: 20%;
 
-      margin-left: 15px;
       padding: 0 10px;
 
       border-radius: 5px;
