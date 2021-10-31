@@ -1,6 +1,8 @@
-<h1 align="center">🔎 Git Search</h1>
+<h1 align="center">:octocat: Git Search</h1>
 
-<p align="center">Um projeto feito para fazer pesquisas por usuários do GitHub consultando a API oficial.</p>
+<img align="center" src="./assets/screenshot.png" />
+
+> Um projeto feito para fazer pesquisas por usuários do GitHub consultando a API oficial.
 
 ## 📃 Conteúdo
 
@@ -11,6 +13,7 @@
 
   - React
   - Vite
+  - Node Fetch
   - Styled Components
   - EsLint
 
