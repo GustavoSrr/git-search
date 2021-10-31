@@ -32,7 +32,7 @@ export const UserInfo: React.FC = () => {
           alt={`Avatar de ${user?.nickname}`}
           draggable={false}
         />
-        <NickName>{user.nickname}</NickName>
+        {user.nickname ? <NickName>{user.nickname}</NickName> : ''}
         <Login
           href={`https://github.com/${user.login}`}
           target="_blank"
@@ -40,7 +40,7 @@ export const UserInfo: React.FC = () => {
           <FaGithubAlt size="16" />
           {user.login}
         </Login>
-        <Bio>{user.bio}</Bio>
+        {user.bio ? <Bio>{user.bio}</Bio> : ''}
         <Others>
           {user.location ?
             <div>
