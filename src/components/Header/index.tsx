@@ -1,10 +1,9 @@
 import React, { FormEvent, useContext, useState } from 'react'
 
 import { FaGithub } from 'react-icons/fa'
-// import { VscInfo } from 'react-icons/vsc'
 import { SearchContext } from '../../contexts/search'
 
-import { Container, Left, Right } from './styles'
+import { Container, Content } from './styles'
 
 export const Header: React.FC = () => {
   const [inputValue, setInputValue] = useState('')
@@ -22,19 +21,16 @@ export const Header: React.FC = () => {
   }
   return (
     <Container>
-        <Left>
-          <FaGithub size="32" />
-          <form onSubmit={(event) => handleSearchForUser(event)}>
-            <input
-              placeholder="Pesquisar"
-              value={inputValue}
-              onChange={(event) => setInputValue(event.target.value)}
-            />
-          </form>
-        </Left>
-        {/* <Right>
-          <VscInfo size="32" />
-        </Right> */}
+      <Content>
+        <a href="https://github.com/GustavoSrr"><FaGithub size="32"/></a>
+        <form onSubmit={(event) => handleSearchForUser(event)}>
+          <input
+            placeholder="Pesquisar"
+            value={inputValue}
+            onChange={(event) => setInputValue(event.target.value)}
+          />
+        </form>
+      </Content>
     </Container>
   )
 }
