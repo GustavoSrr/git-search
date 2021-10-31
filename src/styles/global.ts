@@ -4,6 +4,9 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --bgColor: #0d1117;
     --borderColor: #30363d;
+    --borderHoverColor: #8b949e;
+    --buttonBgColor: #21262d;
+    --buttonTextColor: #c9d1d9;
     --headerBgColor: #161b22;
 
     --blue: #1f6feb;
