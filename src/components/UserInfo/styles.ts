@@ -70,6 +70,10 @@ export const Others = styled.div`
   a {
     color: var(--gray);
     text-decoration: none;
+
+    &:hover {
+      color: var(--white);
+    }
   }
 
   @media only screen and (max-width: 800px) {
