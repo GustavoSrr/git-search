@@ -1,6 +1,6 @@
 <h1 align="center">🔎 Git Search</h1>
 
-> Um projeto para pesquisar por usuários do GitHub feito com React.
+<p align="center">Um projeto feito para fazer pesquisas por usuários do GitHub consultando a API oficial.</p>
 
 ## 📃 Conteúdo
 
