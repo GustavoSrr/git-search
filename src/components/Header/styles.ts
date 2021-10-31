@@ -4,6 +4,10 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   padding: 16px 32px;
 
@@ -26,7 +30,7 @@ export const Left = styled.div`
 
   input {
     height: 28px;
-    width: 250px;
+    width: 100%;
 
     margin-left: 15px;
     padding: 0 10px;
