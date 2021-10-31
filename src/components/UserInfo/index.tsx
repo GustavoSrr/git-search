@@ -25,7 +25,7 @@ export const UserInfo: React.FC = () => {
 
   return (
     <Container>
-      {user ? (
+      {user?.login ? (
       <>
         <Avatar
           src={user?.avatar}
@@ -33,7 +33,10 @@ export const UserInfo: React.FC = () => {
           draggable={false}
         />
         <NickName>{user.nickname}</NickName>
-        <Login href={`https://github.com/${user.login}`}>
+        <Login
+          href={`https://github.com/${user.login}`}
+          target="_blank"
+        >
           <FaGithubAlt size="16" />
           {user.login}
         </Login>
