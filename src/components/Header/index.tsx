@@ -10,13 +10,11 @@ export const Header: React.FC = () => {
 
   const { searchUser } = useContext(SearchContext)
 
-  function handleSearchForUser(event: FormEvent) {
+  function handleSearchForUser (event: FormEvent) {
     event.preventDefault()
 
-    if(inputValue) {
+    if (inputValue) {
       searchUser(inputValue)
-    } else {
-      return
     }
   }
   return (

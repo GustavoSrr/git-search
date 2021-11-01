@@ -1,22 +1,20 @@
-import React, { FormEvent, useContext, useState } from 'react';
-import { SearchContext } from '../../contexts/search';
+import React, { FormEvent, useContext, useState } from 'react'
+import { SearchContext } from '../../contexts/search'
 
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa'
 
-import { Container, GitHub } from './styles';
+import { Container, GitHub } from './styles'
 
 export const SearchBox: React.FC = () => {
   const [inputValue, setInputValue] = useState('')
 
   const { searchUser } = useContext(SearchContext)
 
-  function handleSearchForUser(event: FormEvent) {
+  function handleSearchForUser (event: FormEvent) {
     event.preventDefault()
 
-    if(inputValue) {
+    if (inputValue) {
       searchUser(inputValue)
-    } else {
-      return
     }
   }
 

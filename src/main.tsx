@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import SearchProvider from "./contexts/search";
+import SearchProvider from './contexts/search'
 
 import App from './App'
 

@@ -25,7 +25,8 @@ export const UserInfo: React.FC = () => {
 
   return (
     <Container>
-      {user?.login ? (
+      {user?.login
+        ? (
       <>
         <Avatar
           src={user?.avatar}
@@ -42,48 +43,54 @@ export const UserInfo: React.FC = () => {
         </Login>
         {user.bio ? <Bio>{user.bio}</Bio> : ''}
         <Others>
-          {user.location ?
-            <div>
+          {user.location
+            ? <div>
               <FaMapMarkerAlt />
               <p>{user.location}</p>
-            </div> : ''
+            </div>
+            : ''
           }
-          {user.email ?
-            <div>
+          {user.email
+            ? <div>
               <FaRegEnvelope />
               <p>{user.email}</p>
-            </div> : ''
+            </div>
+            : ''
           }
-          {user.company ?
-            <div>
+          {user.company
+            ? <div>
               <FaRegBuilding />
               <p>{user.company}</p>
-            </div> : ''
+            </div>
+            : ''
           }
-          {user.blog ?
-            <div>
+          {user.blog
+            ? <div>
               <FaLink />
               <a
                 href={user.blog}
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 {user.blog}
               </a>
-            </div> : ''
+            </div>
+            : ''
           }
-          {user.twitter ?
-            <div>
+          {user.twitter
+            ? <div>
               <FaTwitter />
               <a
                 href={`https://twitter.com/${user.twitter}`}
               >
                 @{user.twitter}
               </a>
-            </div> : ''
+            </div>
+            : ''
           }
         </Others>
       </>
-      ) : ''}
+          )
+        : ''}
     </Container>
   )
 }

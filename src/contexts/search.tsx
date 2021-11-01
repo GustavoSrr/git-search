@@ -1,4 +1,4 @@
-import { createContext, useState, FC } from "react";
+import React, { createContext, useState, FC } from 'react'
 
 type User = {
   login: string;
@@ -19,14 +19,14 @@ type SearchState = {
   searchUser: (query: string) => void;
 };
 
-export const SearchContext = createContext<SearchState>({} as SearchState);
+export const SearchContext = createContext<SearchState>({} as SearchState)
 
 const UserProvider: FC = ({ children }) => {
   const [user, setUser] = useState<User>()
 
   const searchUser = async (query: string) => {
-    const res = await fetch(`https://api.github.com/users/${query}`);
-    const result = await res.json();
+    const res = await fetch(`https://api.github.com/users/${query}`)
+    const result = await res.json()
 
     setUser({
       login: result.login,
@@ -41,7 +41,7 @@ const UserProvider: FC = ({ children }) => {
       twitter: result.twitter_username,
       blog: result.blog
     })
-  };
+  }
 
   return (
     <SearchContext.Provider
@@ -52,7 +52,7 @@ const UserProvider: FC = ({ children }) => {
     >
       {children}
     </SearchContext.Provider>
-  );
-};
+  )
+}
 
-export default UserProvider;
+export default UserProvider
