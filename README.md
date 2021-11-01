@@ -1,4 +1,4 @@
-<h1 align="center">:octocat: Git Search</h1>
+<h1 align="center">😺 Git Search</h1>
 
 <img align="center" src="./assets/screenshot.png" />
 
