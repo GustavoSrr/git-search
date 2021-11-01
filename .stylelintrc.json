@@ -1,0 +1,33 @@
+{
+  "processors": [["stylelint-processor-styled-components", {
+    "moduleName": "styled-components",
+    "importName": "default",
+    "strict": false,
+    "ignoreFiles": [],
+    "parserPlugins": [
+      "jsx",
+      ["decorators", { "decoratorsBeforeExport": true }],
+      "classProperties",
+      "exportExtensions",
+      "functionBind",
+      "functionSent"
+    ]
+  }]],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["extends"]
+      }
+    ],
+    "block-no-empty": null,
+    "custom-property-pattern": null,
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null
+  }
+}
