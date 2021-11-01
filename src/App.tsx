@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { SearchContext } from "./contexts/search"
+import Helmet from 'react-helmet'
 
 import { GlobalStyle } from "./styles/global"
 
@@ -12,6 +13,9 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <title>{user?.login || "Git Search"}</title>
+      </Helmet>
       <GlobalStyle />
       {user ? <><Header /> <UserInfo /></> : <SearchBox />}
     </div>
