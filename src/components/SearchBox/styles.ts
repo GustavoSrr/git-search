@@ -56,7 +56,7 @@ export const Container = styled.div`
       width: 80%;
 
       button {
-        margin: 10px 0 0 0;
+        margin-top: 10px;
         height: 32px;
       }
     }
@@ -66,7 +66,7 @@ export const Container = styled.div`
 export const GitHub = styled.a`
   position: absolute;
   top: 0;
-  margin:  16px;
+  margin: 16px;
 
   svg {
     color: var(--white);
